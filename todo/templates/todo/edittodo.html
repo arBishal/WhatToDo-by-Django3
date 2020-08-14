@@ -2,9 +2,10 @@
 {% block content %}
 
 <b> {{ todo.title }} </b>
-<br> {{ todo.memo }}
 <br>
-<a href="{% url 'edittodo' todo.id %}">Edit</a>
 
+<form action="POST">
+    {{ form.as_p }}
+</form>
 
 {% endblock %}

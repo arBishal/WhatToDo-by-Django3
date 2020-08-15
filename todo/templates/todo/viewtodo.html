@@ -1,10 +1,17 @@
 {% extends 'todo/base.html' %}
 {% block content %}
 
-<b> {{ todo.title }} </b>
-<br> {{ todo.memo }}
-<br>
-<a href="{% url 'edittodo' todo.id %}">Edit</a>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
+            <h1> {{ todo.title }} </h1>
+            <a href="{% url 'edittodo' todo.id %}">Edit</a>
+        </div>
+    </div>
+
+
+<br> <br> {{ todo.memo }}
+<br> <br>
+
 
 
 {% endblock %}
